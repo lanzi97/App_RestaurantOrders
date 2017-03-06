@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- General margins, paddings, ... -->
+
+    <!-- Margin between two shape_rectangle_border -->
+    <dimen name="margin_shape_rectangle">2dp</dimen>
+
+
+
+    <!-- Shape_rectangle_border dimensions -->
+    <dimen name="shape_rectangle_padding">10dp</dimen>
+    
+</resources>
