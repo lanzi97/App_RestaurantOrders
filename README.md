@@ -1,1 +1,1 @@
-Is't a private project, please don't edit files.
+We are trying to make an Android App to take orders
