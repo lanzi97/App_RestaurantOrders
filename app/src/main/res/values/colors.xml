@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff1519</color>
 
+    <!-- Shape_rectangle_overlay colors -->
+    <color name="shapeRectangleOverlayBackground">#dc727679</color>
     <!-- Input text colors -->
     <color name="backgroundText">#ffffff</color>
     <color name="colorBorderText">@color/colorPrimaryDark</color>

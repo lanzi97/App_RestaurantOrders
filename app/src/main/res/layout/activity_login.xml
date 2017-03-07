@@ -9,14 +9,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.laprogramming.restaurantorders.LoginActivity">
+    tools:context="com.laprogramming.restaurantorders.LoginActivity"
 
-    <!-- Changhe this layout width -->
+    android:background="#847e7e">
+    <!-- TODO Change background -->
+
+    <!-- TODO Changhe this LinearLayout width -->
     <LinearLayout
         android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal|center_vertical">
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/shape_rectangle_overlay">
 
         <TextView
             android:layout_width="wrap_content"

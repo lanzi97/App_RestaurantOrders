@@ -12,12 +12,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
+    /*
+    Check user credentials and open up new activity
+     */
     public void userCheck(String username, String password){
-        boolean access=true;//remove true
-        //USER CHECK
+        boolean access=true;    //TODO remove true
+
         if(access == true){
-            Intent verified = new Intent(this, HomeActivity.class);//CREATE HOME ACTIVITY
-            startActivity(verified);
+            //Intent verified = new Intent(this, HomeActivity.class);   //TODO CREATE HOME ACTIVITY
+            //startActivity(verified);
         }
     }
 }
