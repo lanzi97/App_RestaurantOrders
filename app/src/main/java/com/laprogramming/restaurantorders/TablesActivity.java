@@ -28,6 +28,7 @@ public class TablesActivity extends AppCompatActivity {
         });
     }
 
+
     /*
     Open un new activity after button click
      */
@@ -39,6 +40,7 @@ public class TablesActivity extends AppCompatActivity {
         confirmed.putExtra("tableNumber", tableNumber);
         startActivity(confirmed);
     }
+
 
     /*
     Initialize toolbar with back button and title
