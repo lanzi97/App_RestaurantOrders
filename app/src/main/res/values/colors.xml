@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- General colors -->
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff1519</color>
+    <!-- Text color over color:colorPrimary -->
+    <color name="colorTextOverPrimary">#ffffff</color>
+
 
     <!-- Shape_rectangle_overlay colors -->
     <color name="shapeRectangleOverlayBackground">#dc727679</color>
