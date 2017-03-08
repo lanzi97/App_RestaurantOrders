@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.laprogramming.restaurantorders.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_toolbar">
+        <!--  TODO Choose from this to standard toolbar
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center_vertical"
+
+            android:src="@drawable/ic_toolbar_arrow_back"
+            android:tint="#ffffff"
+            android:background="#00000000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTextOverPrimary"
+            android:text="Tables"
+            android:textSize="24dp" />  -->
+    </android.support.v7.widget.Toolbar>
+
+
+    <!-- Grid and List View container, one over other   TODO find a better way -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom_bar"
+        android:layout_below="@+id/main_toolbar">
+        <!-- TODO Verify this if it works -->
+        <ListView
+            android:id="@+id/main_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        <GridView
+            android:id="@+id/main_grid_plates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </GridView>
+
+        <GridView
+            android:id="@+id/main_grid_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </GridView>
+
+    </FrameLayout>
+
+    <!-- Bottom bar container-->
+    <RelativeLayout
+        android:id="@+id/main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!-- TODO change text, textSize programmatically, change ImageButton-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Totale : BIG €"
+            android:textSize="18dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_arrow_forward"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

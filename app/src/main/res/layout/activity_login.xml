@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:background="@drawable/shape_rectangle_overlay">
+        android:background="@drawable/shape_rectangle_overlay"
+        android:elevation="@dimen/elevation_popup">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +30,7 @@
             android:text="-----------------\n---ICONA---\n-----------------"/>
 
         <EditText
-            android:id="@+id/login_user"
+            android:id="@+id/login_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -37,7 +38,6 @@
             android:layout_marginBottom="@dimen/margin_shape_rectangle"
 
             android:hint="Username"
-            android:textAlignment="center"
             android:inputType="text"/>
 
         <EditText
@@ -48,7 +48,6 @@
             android:background="@drawable/shape_rectangle_border"
 
             android:hint="Password"
-            android:textAlignment="center"
             android:inputType="textPassword"/>
 
     </LinearLayout>
@@ -62,7 +61,8 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_arrow_forward"
         android:layout_gravity="end|bottom"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:elevation="@dimen/elevation_float_button"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

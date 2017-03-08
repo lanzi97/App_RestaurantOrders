@@ -7,6 +7,10 @@
 
     <!-- Margin between two shape_rectangle_border -->
     <dimen name="margin_shape_rectangle">2dp</dimen>
+    <!-- Elevation values -->
+    <dimen name="elevation_toolbar">4dp</dimen>
+    <dimen name="elevation_popup">10dp</dimen>
+    <dimen name="elevation_float_button">50dp</dimen>
 
 
 
