@@ -11,6 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -56,11 +63,25 @@ public class LoginActivity extends AppCompatActivity {
     Check user credentials and open up new activity
      */
     private void userCheck(String username, String password){
-        boolean access=true;    //TODO remove true
 
-        Toast.makeText(this, "Username = "+ username + "\nPassword = "+ password, Toast.LENGTH_LONG).show();
+        int access=0;
 
-        if(access == true){
+        try{
+            InetSocketAddress address = new InetSocketAddress("192.168.1.110", 5622);
+            System.out.println(address.getAddress().getHostAddress());
+            Socket server_socket = new Socket(address.getAddress().getHostAddress(),address.getPort());//Tries to estabilish connection
+            /*OutputStream output = server_socket.getOutputStream();//Catches output stream
+            BufferedInputStream input = new BufferedInputStream(server_socket.getInputStream());//Catches input stream
+            output.write(1);
+            access = input.read();*/
+            access=1;
+        }
+        catch(IOException e){};
+
+
+        //Toast.makeText(this, "Username = "+ username + "\nPassword = "+ password, Toast.LENGTH_LONG).show();
+
+        if(access == 1){
             Intent verified = new Intent(this, TablesActivity.class);
             startActivity(verified);
         }
