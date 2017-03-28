@@ -9,14 +9,8 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import com.laprogramming.restaurantorders.socket.*;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -66,17 +60,10 @@ public class LoginActivity extends AppCompatActivity {
 
         int access=0;
 
-        try{
-            InetSocketAddress address = new InetSocketAddress("192.168.1.110", 5622);
-            System.out.println(address.getAddress().getHostAddress());
-            Socket server_socket = new Socket(address.getAddress().getHostAddress(),address.getPort());//Tries to estabilish connection
-            /*OutputStream output = server_socket.getOutputStream();//Catches output stream
-            BufferedInputStream input = new BufferedInputStream(server_socket.getInputStream());//Catches input stream
-            output.write(1);
-            access = input.read();*/
-            access=1;
-        }
-        catch(IOException e){};
+        SocketConnection conn1=new SocketConnection(username+"/"+password);
+        conn1.start();
+
+        access=1;
 
 
         //Toast.makeText(this, "Username = "+ username + "\nPassword = "+ password, Toast.LENGTH_LONG).show();
